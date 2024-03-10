@@ -151,7 +151,7 @@ export default class MainScene {
     const material = new MeshLambertMaterial({color: '#ffffff' })
    
     const posterplane1 = new PlaneGeometry( 0.85, 1.1 )
-    const t_poster1 = new TextureLoader().load('../textureImages/wayDownEastPoster.jpg' )
+    const t_poster1 = new TextureLoader().load('./textureImages/wayDownEastPoster.jpg' )
 
     const m_poster1 = new MeshLambertMaterial( { map:t_poster1 } )
     this.#poster1 = new Mesh(posterplane1, m_poster1)
