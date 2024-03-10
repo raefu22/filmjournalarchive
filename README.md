@@ -1,13 +1,34 @@
-![Capture d'écran 2023-03-08 111345](https://user-images.githubusercontent.com/5593293/223686025-03039501-6210-4032-98e9-cc2cca840a7f.png)
+# Steps when iterating
+git fetch
+git commit -a
+git push
+npm run build
+npm run deploy
+in the index html file in dist folder, change file location to relative ./assets/###xx
+copy textureImages folder to gh-pages branch 
 
+# Steps to gh-pages
+npm install gh-pages
+Under "scripts" in your package.json: "deploy": gh-pages -d dist
+npm run build
+git init
+git remote add origin "https://github.com/raefu22/filmjournalarchive.git"
+git add .
+git commit -m "commit"
+git pull
+git push
+npm run deploy
 
-# Vite template builder to quickly generate Threejs code in the browser.
+reference: 
+https://stackoverflow.com/questions/73016488/how-do-i-deploy-a-three-js-project-to-github-pages#:~:text=I%20found%20that%20using%20gh-pages%20is%20the%20easiest,for%20'deploy.'%20Like%20this%3A%20"deploy"%3A%20gh-pages%20-d%20dist
+
+https://www.loom.com/share/1d9a06ec11f542e5861ef7e85e38e912
+
+# Beginning Setup: Used Vite template builder to quickly generate Threejs code in the browser.
 
 This repository will help creating 3D environment using [Threejs](https://threejs.org/examples/#webgl_animation_keyframes), a powerful WebGL library. It is powered by [Vite](https://vitejs.dev/guide/why.html) ⚡️ that quickly compiles anything you need, it is also including [Sass](https://sass-lang.com/guide), [Babel](https://babeljs.io/), [Eslint](https://eslint.org/), [Prettier](https://prettier.io/), [lil-gui](https://www.npmjs.com/package/lil-gui) and [GSAP](https://greensock.com/docs/) for animations.
 
 It is also including a LoaderManager JS file to easily load your assets: (Image, Textures, 3D models...) in one function.
-
-## [See it live](https://robpayot.github.io/vite-threejs-template/)
 
 ## How to install
 
