@@ -35,6 +35,17 @@ export default class MainScene {
   #height
   #mesh
   #poster1
+  #poster2
+  #poster3
+  #poster4
+  #poster5
+  #poster6
+  #poster7
+  #poster8
+  #poster9
+  #poster10
+  #poster11
+  #poster12
   #posters
   #interactionManager
   #guiObj = {
@@ -59,7 +70,7 @@ export default class MainScene {
 
     await LoaderManager.load(assets)
 
-    this.setStats()
+    //this.setStats()
     //this.setGUI()
     this.setScene()
     this.setRender()
@@ -96,7 +107,7 @@ export default class MainScene {
    */
   setScene() {
     this.#scene = new Scene()
-    this.#scene.background = new Color(0xc3e5e1)
+    this.#scene.background = new Color(0x000000)
   }
 
   /**
@@ -113,10 +124,10 @@ export default class MainScene {
     const farPlane = 10000
 
     this.#camera = new PerspectiveCamera(fieldOfView, aspectRatio, nearPlane, farPlane)
-    this.#camera.position.y = 5
-    this.#camera.position.x = 5
-    this.#camera.position.z = 5
-    this.#camera.lookAt(0, 0, 0)
+    this.#camera.position.y = 0.2
+    this.#camera.position.x = 4
+    this.#camera.position.z = 4.5
+    this.#camera.lookAt(0, 0, -1)
 
     this.#scene.add(this.#camera)
   }
@@ -149,18 +160,127 @@ export default class MainScene {
   setSphere() {
     //const geometry = new SphereGeometry(1, 32, 32)
     const material = new MeshLambertMaterial({color: '#ffffff' })
-   
+    //poster1
     const posterplane1 = new PlaneGeometry( 0.85, 1.1 )
     const t_poster1 = new TextureLoader().load('/filmjournalarchive/textureImages/wayDownEastPoster.jpg' )
-
     const m_poster1 = new MeshLambertMaterial( { map:t_poster1 } )
     this.#poster1 = new Mesh(posterplane1, m_poster1)
     this.#poster1.position.y = 1
+    this.#poster1.position.x = -6
     this.#poster1.position.z = 3
     this.#scene.add(this.#poster1)
     this.#posters = []
     this.#posters.push(this.#poster1)
-
+    //poster2
+    const posterplane2 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster2 = new TextureLoader().load('/filmjournalarchive/textureImages/rearWindowPoster.jpg' )
+    const m_poster2 = new MeshLambertMaterial( { map:t_poster2 } )
+    this.#poster2 = new Mesh(posterplane2, m_poster2)
+    this.#poster2.position.y = 1
+    this.#poster2.position.x = -4.8
+    this.#poster2.position.z = 3
+    this.#scene.add(this.#poster2)
+    this.#posters.push(this.#poster2)
+    //poster3
+    const posterplane3 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster3 = new TextureLoader().load('/filmjournalarchive/textureImages/thePianoPoster.jpg' )
+    const m_poster3 = new MeshLambertMaterial( { map:t_poster3 } )
+    this.#poster3 = new Mesh(posterplane3, m_poster3)
+    this.#poster3.position.y = 1
+    this.#poster3.position.x = -3.6
+    this.#poster3.position.z = 3
+    this.#scene.add(this.#poster3)
+    this.#posters.push(this.#poster3)
+    //poster4
+    const posterplane4 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster4 = new TextureLoader().load('/filmjournalarchive/textureImages/nosferatuPoster.jpg' )
+    const m_poster4 = new MeshLambertMaterial( { map:t_poster4 } )
+    this.#poster4 = new Mesh(posterplane4, m_poster4)
+    this.#poster4.position.y = 1
+    this.#poster4.position.x = -2.4
+    this.#poster4.position.z = 3
+    this.#scene.add(this.#poster4)
+    this.#posters.push(this.#poster4)
+    //poster5
+    const posterplane5 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster5 = new TextureLoader().load('/filmjournalarchive/textureImages/metropolisPoster.jpg' )
+    const m_poster5 = new MeshLambertMaterial( { map:t_poster5 } )
+    this.#poster5 = new Mesh(posterplane5, m_poster5)
+    this.#poster5.position.y = 1
+    this.#poster5.position.x = -1.2
+    this.#poster5.position.z = 3
+    this.#scene.add(this.#poster5)
+    this.#posters.push(this.#poster5)
+    //poster6
+    const posterplane6 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster6 = new TextureLoader().load('/filmjournalarchive/textureImages/theMurderersAreAmongUsPoster.jpg' )
+    const m_poster6 = new MeshLambertMaterial( { map:t_poster6 } )
+    this.#poster6 = new Mesh(posterplane6, m_poster6)
+    this.#poster6.position.y = 1
+    this.#poster6.position.x = 0
+    this.#poster6.position.z = 3
+    this.#scene.add(this.#poster6)
+    this.#posters.push(this.#poster6)
+    //poster7
+    const posterplane7 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster7 = new TextureLoader().load('/filmjournalarchive/textureImages/theBridgePoster.jpg' )
+    const m_poster7 = new MeshLambertMaterial( { map:t_poster7 } )
+    this.#poster7 = new Mesh(posterplane7, m_poster7)
+    this.#poster7.position.y = 1
+    this.#poster7.position.x = 1.2
+    this.#poster7.position.z = 3
+    this.#scene.add(this.#poster7)
+    this.#posters.push(this.#poster7)
+    //poster8
+    const posterplane8 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster8 = new TextureLoader().load('/filmjournalarchive/textureImages/theSecondTrackPoster.jpg' )
+    const m_poster8 = new MeshLambertMaterial( { map:t_poster8 } )
+    this.#poster8 = new Mesh(posterplane8, m_poster8)
+    this.#poster8.position.y = 1
+    this.#poster8.position.x = 2.4
+    this.#poster8.position.z = 3
+    this.#scene.add(this.#poster8)
+    this.#posters.push(this.#poster8)
+    //poster9
+    const posterplane9 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster9 = new TextureLoader().load('/filmjournalarchive/textureImages/eolomeaPoster.jpg' )
+    const m_poster9 = new MeshLambertMaterial( { map:t_poster9 } )
+    this.#poster9 = new Mesh(posterplane9, m_poster9)
+    this.#poster9.position.y = 1
+    this.#poster9.position.x = 3.6
+    this.#poster9.position.z = 3
+    this.#scene.add(this.#poster9)
+    this.#posters.push(this.#poster9)
+    //poster10
+    const posterplane10 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster10 = new TextureLoader().load('/filmjournalarchive/textureImages/dasBootPoster.jpg' )
+    const m_poster10 = new MeshLambertMaterial( { map:t_poster10 } )
+    this.#poster10 = new Mesh(posterplane10, m_poster10)
+    this.#poster10.position.y = 1
+    this.#poster10.position.x = 4.8
+    this.#poster10.position.z = 3
+    this.#scene.add(this.#poster10)
+    this.#posters.push(this.#poster10)
+    //poster11
+    const posterplane11 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster11 = new TextureLoader().load('/filmjournalarchive/textureImages/downfallPoster.jpg' )
+    const m_poster11 = new MeshLambertMaterial( { map:t_poster11 } )
+    this.#poster11 = new Mesh(posterplane11, m_poster11)
+    this.#poster11.position.y = 1
+    this.#poster11.position.x = 6
+    this.#poster11.position.z = 3
+    this.#scene.add(this.#poster11)
+    this.#posters.push(this.#poster11)
+    //poster12
+    const posterplane12 = new PlaneGeometry( 0.85, 1.1 )
+    const t_poster12 = new TextureLoader().load('/filmjournalarchive/textureImages/germanyPaleMotherPoster.jpg' )
+    const m_poster12 = new MeshLambertMaterial( { map:t_poster12 } )
+    this.#poster12 = new Mesh(posterplane12, m_poster12)
+    this.#poster12.position.y = 1
+    this.#poster12.position.x = 7.2
+    this.#poster12.position.z = 3
+    this.#scene.add(this.#poster12)
+    this.#posters.push(this.#poster12)
   }
 
   setLights() {
@@ -174,7 +294,7 @@ export default class MainScene {
   setReflector() {
     let geometry, material;
 
-				geometry = new CircleGeometry( 40, 64 );
+				geometry = new CircleGeometry( 20, 64 );
 				this.groundMirror = new Reflector( geometry, {
 					clipBias: 0.003,
 					textureWidth: window.innerWidth * window.devicePixelRatio,
@@ -195,12 +315,12 @@ export default class MainScene {
     
     
     this.#poster1.addEventListener('mouseover', (event) => {
-      event.target.material.color.set(0xff2200);
+      //event.target.material.color.set(0xff2200);
       event.target.scale.set(1.5, 1.5, 1.5);
       document.body.style.cursor = 'pointer';
     });
     this.#poster1.addEventListener('mouseout', (event) => {
-      event.target.material.color.set(0xffffff);
+      //event.target.material.color.set(0xffffff);
       event.target.scale.set(1.0, 1.0, 1.0);
       document.body.style.cursor = 'default';
     });
@@ -215,6 +335,204 @@ export default class MainScene {
     
     this.#interactionManager.add(this.#poster1)
     
+    //poster2
+    this.#poster2.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster2.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    
+    this.#poster2.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster2.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/rearwindow.html'
+    });
+    this.#interactionManager.add(this.#poster2)
+
+    //poster3
+    this.#poster3.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster3.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster3.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster3.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/thepiano.html'
+    });
+    this.#interactionManager.add(this.#poster3)
+
+    //poster4
+    this.#poster4.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster4.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster4.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster4.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/nosferatu.html'
+    });
+    this.#interactionManager.add(this.#poster4)
+
+    //poster5
+    this.#poster5.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster5.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster5.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster5.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/metropolis.html'
+    });
+    this.#interactionManager.add(this.#poster5)
+
+    //poster6
+    this.#poster6.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster6.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster6.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster6.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/themurderersareamongus.html'
+    });
+    this.#interactionManager.add(this.#poster6)
+
+    //poster7
+    this.#poster7.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster7.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster7.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster7.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/thebridge.html'
+    });
+    this.#interactionManager.add(this.#poster7)
+
+    //poster8
+    this.#poster8.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster8.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster8.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster8.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/thesecondtrack.html'
+    });
+    this.#interactionManager.add(this.#poster8)
+
+    //poster9
+    this.#poster9.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster9.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster9.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster9.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/eolomea.html'
+    });
+    this.#interactionManager.add(this.#poster9)
+
+    //poster10
+    this.#poster10.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster10.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster10.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster10.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/dasboot.html'
+    });
+    this.#interactionManager.add(this.#poster10)
+
+    //poster11
+    this.#poster11.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster11.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster11.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster11.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/downfall.html'
+    });
+    this.#interactionManager.add(this.#poster11)
+
+    //poster12
+    this.#poster12.addEventListener('mouseover', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      document.body.style.cursor = 'pointer';
+    });
+    this.#poster12.addEventListener('mouseout', (event) => {
+      event.target.scale.set(1.0, 1.0, 1.0);
+      document.body.style.cursor = 'default';
+    });
+    this.#poster12.addEventListener('mousedown', (event) => {
+      event.target.scale.set(1.6,1.6, 1.6);
+    });
+    this.#poster12.addEventListener('click', (event) => {
+      event.target.scale.set(1.5, 1.5, 1.5);
+      window.location.href = 'https://raefu.com/filmjournalarchive/germanypalemother.html'
+    });
+    this.#interactionManager.add(this.#poster12)
   }
   /**
    * Build stats to display fps
@@ -255,14 +573,14 @@ export default class MainScene {
    */
   draw = () => {
     // now: time in ms
-    this.#stats.begin()
+    //this.#stats.begin()
     this.#interactionManager.update();
-    if (this.#controls) this.#controls.update() // for damping
+    //if (this.#controls) this.#controls.update() // for damping
     this.#renderer.render(this.#scene, this.#camera)
 
 
     
-    this.#stats.end()
+    //this.#stats.end()
     this.raf = window.requestAnimationFrame(this.draw)
   }
 

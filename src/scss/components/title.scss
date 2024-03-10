@@ -1,11 +1,19 @@
 .main-title {
   position: absolute;
   text-align: center;
-  font-size: 7vw;
+  font-size: 12vw;
   width: 100%;
   top: 50%;
   left: 0;
   z-index: 10;
   transform: translateY(-50%);
-  color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.disable-select {
+  user-select: none; /* supported by Chrome and Opera */
+ -webkit-user-select: none; /* Safari */
+ -khtml-user-select: none; /* Konqueror HTML */
+ -moz-user-select: none; /* Firefox */
+ -ms-user-select: none; /* Internet Explorer/Edge */
 }
