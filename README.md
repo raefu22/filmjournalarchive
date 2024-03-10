@@ -5,6 +5,7 @@ git push
 npm run build
 npm run deploy
 in the index html file in dist folder, change file location to relative ./assets/###xx
+copy textureImages folder to gh-pages branch 
 
 # Steps to gh-pages
 npm install gh-pages
