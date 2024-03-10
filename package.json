@@ -1,10 +1,7 @@
 {
   "private": true,
-  "name": "vite-2d-shader-template",
+  "name": "filmjournalarchive",
   "version": "0.0.0",
-  "description": "Template to quickly code in Threejs, powered by Vite.",
-  "author": "Robin Payot <robpayot@gmail.com>",
-  "license": "MIT",
   "type": "module",
   "keywords": [
     "threejs",
@@ -13,14 +10,12 @@
     "fun",
     "code"
   ],
-  "contributors": [
-    "Robin Payot <robpayot@gmail.com>"
-  ],
+  
   "scripts": {
     "dev": "vite",
-    "build": "vite build --emptyOutDir",
+    "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build --emptyOutDir && gh-pages -d dist"
+    "deploy": " gh-pages -d dist"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
